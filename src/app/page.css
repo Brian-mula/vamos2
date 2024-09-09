@@ -1,0 +1,21 @@
+.vamos-bg{
+    background-image: url('/images/mobile_image.png');
+    /* background-position: center; */
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    opacity: 0.98;
+}
+
+@media screen and (min-width: 992px) {
+    .vamos-bg {
+        background-image: url('/images/vamos-bg.png');
+        /* background-position: center; */
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        opacity: 0.98;
+    }
+  }

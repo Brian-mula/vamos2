@@ -1,101 +1,75 @@
+"use client";
+
+import TawkToComponent from "@/components/TawkToComponent";
 import Image from "next/image";
+import Link from "next/link";
+import { useEffect } from "react";
+import "./page.css";
 
-export default function Home() {
+export default function Page() {
+  const url = "https://embed.tawk.to/6082a08d62662a09efc16533/1f3v46arb";
+  const href = "https://arada.bet/lander";
+  useEffect(() => {
+    const script = document.createElement("script");
+
+    script.src = url;
+    script.setAttribute("chat", "true");
+    script.async = true;
+    script.charset = "UTF-8";
+    script.setAttribute("crossorigin", "*");
+    document.body.appendChild(script);
+    console.log(script);
+  }, []);
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="bg-tertiary">
+      <div className="w-screen flex justify-start lg:justify-center flex-col items-center py-16 px-4 lg:px-36 h-screen mx-auto bg-gray-800/80 ">
         <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="/image/arada-logo.png"
+          alt="Vamos Logo"
+          width={100}
+          height={100}
+          className=""
         />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+        <h1 className="text-primary text-2xl lg:text-5xl pt-6 pb-3 text-center">
+          Official Notice!
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <p className="max-w-md lg:max-w-5xl text-center text-[12px] lg:text-2xl  py-3 text-white tracking-wider font-medium">
+          Due to failure to meet their payment obligation, Vamos Entertainment
+          PLC. lost their access to this domain as well as the software. We
+          regret to inform you that the software the company was using is no
+          longer operational.
+        </p>
+
+        <h1 className="text-primary text-2xl lg:text-5xl py-3 text-center">
+          Good news!
+        </h1>
+
+        <p className="max-w-md lg:max-w-5xl text-center text-[12px] lg:text-2xl  py-3 text-white tracking-wider font-medium">
+          You can now go to{" "}
+          <Link href={href} className="text-primary text font-bold text-sm lg:text-2xl">
+            {" "}
+            arada.bet
+          </Link>{" "}
+          and find the same software with better odds and bonuses. You can log
+          in using your previous phone number password, Arada has agreed to even
+          keep your old wallet balance so your money is not lost.
+        </p>
+
+        <h1 className="text-primary text-xl lg:text-2xl py-3 text-center">
+          Arada Bet - We always pay (even to our suppliers)
+        </h1>
+
+        <div className="flex space-x-3 justify-center items-center pt-10">
+          <Link
+            href={href}
+            className="btn rounded-md bg-yellow-400 hover:bg-yellow-400 text-gray-950 text-lg animate-bounce border-primary border"
           >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            New Login
+          </Link>
+          <TawkToComponent />
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </div>
     </div>
   );
 }
